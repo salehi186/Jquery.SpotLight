@@ -27,19 +27,12 @@
             spotLight = $("<div id='spotLightCustom' style='top:0;left:0;border: solid black;display:none;background-color:"
             + settings.color + ";border-color:" + settings.backgroundColor
             + "; position:fixed;border-right-width: 10000px;border-bottom-width: 10000px;' ></div");
-
             spotLight.appendTo(document.body);
         }
-        spotLight.css("z-index", zIndex);
-        spotLight.width(1);
-        spotLight.height(1);
-        spotLight.css('opacity', settings.opacity);
-
-        spotLight.css("border-top-width", 0);
-        spotLight.css("border-left-width", 0);
-        spotLight.show();
+        
+        spotLight.css({width:'1px',height:'1px',"z-index":zIndex,'opacity':settings.opacity,"border-top-width": 0,"border-left-width":0,display:'block'});
+       
         spotLight.animate({ height: this.height(), width: this.width(), "border-left-width": position.x?position.x:position.left, "border-top-width": position.y?position.y:position.top }, 1000, function () { });
-        // spotLight.fadeIn();
         return this;
     }
 
