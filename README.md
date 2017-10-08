@@ -5,6 +5,7 @@ SpotLightOn()
   overlay all of the window with a shadow except your element.
 SpotLightOff()
   remove overlay shadow.
+  [Demo :http://salehi186.github.io/Jquery.SpotLight/]:http://salehi186.github.io/Jquery.SpotLight/
   
   
   
